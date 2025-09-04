@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+      <input
+        type="text"
+        id="expense-name"
+        placeholder="Expense name"
+        required
+      />
+      <input
+        type="number"
+        id="expense-amount"
+        placeholder="Amount"
+        required
+      />
+      <input type="date" name="" id="expenseDate" required>
+      <select name="" id="expenseCategory">
+        <option value="" disabled selected>Category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="others">others</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div class="filter">
+      <select name="" id="sort-options">
+        <option value="" disabled selected>Sort By</option>
+        <option value="amount-asc">Amount(Low to High)</option>
+        <option value="amount-desc">Amount(High to Low)</option>
+        <option value="date-asc">Date(Oldest to Newest)</option>
+        <option value="date-desc">Date(Newest to Oldest)</option>
+      </select>
+      <select name="" id="filter-category">
+        <option value="" selected>All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="others">others</option>
+      </select>
+    </div>
+
+    <h2>Expenses</h2>
+    <ul id="expense-list">
+      <!-- Expenses will be dynamically added here -->
+    </ul>
+
+    <div id="total">
+      <h3>Total: ₹<span id="total-amount">0.00</span></h3>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
